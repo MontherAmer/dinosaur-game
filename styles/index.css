@@ -2,6 +2,12 @@
 @import './dinosaur.css';
 @import './view.css';
 @import './animations.css';
+@import './counter.css';
+
+@font-face {
+  font-family: 'digital';
+  src: url('../assets/fonts/PressStart2P-Regular.ttf');
+}
 
 body {
   width: 100%;
@@ -10,6 +16,8 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  font-family: 'digital';
+  color: #737373;
 }
 
 .container {
@@ -17,4 +25,13 @@ body {
   width: 600px;
   height: 150px;
   overflow: hidden;
+}
+
+.game_over {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 1000;
 }
