@@ -43,3 +43,8 @@ export const stopAnimations = () => {
   cloud2.style.animationPlayState = 'paused';
   cloud3.style.animationPlayState = 'paused';
 };
+
+export const showGameOver = () => {
+  const gameOverImg = document.querySelector('.game_over');
+  gameOverImg.style.display = 'block';
+};
