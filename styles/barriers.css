@@ -1,57 +1,53 @@
 .barrier {
   position: absolute;
-  bottom: 8px;
+  bottom: 5px;
   background-size: auto;
   background-repeat: no-repeat;
   width: 50px;
   height: 50px;
-  background-size: contain;
+  background-size: cover;
+  animation: barrier-slide 3.3s linear both;
 }
 
 .barrier1 {
   background-image: url('../assets/images/barrier1.png');
-  left: 550px;
   width: 22px;
   height: 46px;
 }
 
 .barrier2 {
   background-image: url('../assets/images/barrier2.png');
-  left: 50px;
   width: 45px;
   height: 46px;
 }
 
 .barrier3 {
   background-image: url('../assets/images/barrier3.png');
-  left: 150px;
-  height: 32px;
-  width: 47px;
+  height: 50px;
+  width: 75px;
 }
 
 .barrier4 {
   background-image: url('../assets/images/barrier4.png');
-  left: 250px;
-  width: 49px;
-  height: 25px;
+  width: 90px;
+  height: 46px;
 }
 
 .barrier5 {
   background-image: url('../assets/images/barrier5.png');
-  left: 350px;
-  width: 50px;
-  height: 24px;
+  width: 84px;
+  height: 40px;
 }
 
 .barrier6 {
   background-image: url('../assets/images/barrier6.gif');
-  width: 31px;
-  height: 22px;
+  width: 43px;
+  height: 27px;
+  bottom: 32px;
 }
 
 .barrier7 {
   background-image: url('../assets/images/barrier7.png');
-  left: 450px;
-  width: 56px;
-  height: 35px;
+  width: 73px;
+  height: 46px;
 }
