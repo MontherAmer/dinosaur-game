@@ -1,0 +1,57 @@
+.barrier {
+  position: absolute;
+  bottom: 8px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+}
+
+.barrier1 {
+  background-image: url('../assets/images/barrier1.png');
+  left: 550px;
+  width: 22px;
+  height: 46px;
+}
+
+.barrier2 {
+  background-image: url('../assets/images/barrier2.png');
+  left: 50px;
+  width: 45px;
+  height: 46px;
+}
+
+.barrier3 {
+  background-image: url('../assets/images/barrier3.png');
+  left: 150px;
+  height: 32px;
+  width: 47px;
+}
+
+.barrier4 {
+  background-image: url('../assets/images/barrier4.png');
+  left: 250px;
+  width: 49px;
+  height: 25px;
+}
+
+.barrier5 {
+  background-image: url('../assets/images/barrier5.png');
+  left: 350px;
+  width: 50px;
+  height: 24px;
+}
+
+.barrier6 {
+  background-image: url('../assets/images/barrier6.gif');
+  width: 31px;
+  height: 22px;
+}
+
+.barrier7 {
+  background-image: url('../assets/images/barrier7.png');
+  left: 450px;
+  width: 56px;
+  height: 35px;
+}

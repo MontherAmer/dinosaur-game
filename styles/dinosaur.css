@@ -1,0 +1,28 @@
+.dinosaur {
+  position: absolute;
+  bottom: 8px;
+  width: 41px;
+  height: 46px;
+  background-image: url('../assets/images/start-dinosaur.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.dinosaur_run1 {
+  background-image: url('../assets/images/dinosaur-run1.png');
+}
+
+.dinosaur_run2 {
+  background-image: url('../assets/images/dinosaur-run2.png');
+}
+
+.dinosaur_bend1 {
+  background-image: url('../assets/images/dinosaur-bend1.png');
+  height: 30px;
+  width: 67px;
+}
+.dinosaur_bend2 {
+  background-image: url('../assets/images/dinosaur-bend1.png');
+  height: 30px;
+  width: 67px;
+}
