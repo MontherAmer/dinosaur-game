@@ -3,6 +3,11 @@ let counter = 0;
 let counterDiv = document.querySelector('.counter');
 let topScoreDiv = document.querySelector('.top_score');
 
+const playPointsSound = () => {
+  const pointAudio = document.getElementById('pointAudio');
+  pointAudio.play();
+};
+
 const displayOnScreen = (type, data) => {
   let numberOfZeros = (data + '').length;
   let str = '';
@@ -20,6 +25,7 @@ export const startCounter = () => {
     counter > topScore ? (topScore = counter) : null;
     displayOnScreen('C', counter);
     displayOnScreen('T', topScore);
+    counter % 100 === 0 ? playPointsSound() : null;
   }, 70);
 };
 

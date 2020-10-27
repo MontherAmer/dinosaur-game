@@ -48,3 +48,8 @@ export const showGameOver = () => {
   const gameOverImg = document.querySelector('.game_over');
   gameOverImg.style.display = 'block';
 };
+
+export const playDieSound = () => {
+  const dieAudio = document.getElementById('dieAudio');
+  dieAudio.play();
+};

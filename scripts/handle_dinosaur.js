@@ -1,6 +1,11 @@
 let dinosaurInterval;
 let dinosaurisBending;
 
+const playJumbSound = () => {
+  const jumbAudio = document.getElementById('jumbAudio');
+  jumbAudio.play();
+};
+
 export const moveDinosaur = () => {
   const dinosaur = document.querySelector('.dinosaur');
   let interval = 1;
@@ -15,6 +20,7 @@ export const moveDinosaur = () => {
 export const jumb = () => {
   const dinosaur = document.querySelector('.dinosaur');
   dinosaur.classList.add('dinosaur-jumb');
+  playJumbSound();
   setTimeout(() => {
     dinosaur.classList.remove('dinosaur-jumb');
   }, 1100);
