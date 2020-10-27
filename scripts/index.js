@@ -6,7 +6,8 @@ const { prepareContainer } = require('./pre_start');
 const { moveDinosaur, jumb, bend, stopBending, clrearDinosaurInterval } = require('./handle_dinosaur');
 const { createBarriers, clearBarrierInterval } = require('./handle_barriers');
 const { startView } = require('./handle_view');
-const { handleGameOver, stopAnimations } = require('./handle_game_over');
+const { handleGameOver, stopAnimations, showGameOver } = require('./handle_game_over');
+const { startCounter, stopCounter } = require('./handle_counter');
 
 // * document loaded
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const startGame = () => {
     isGameOn = true;
+    startCounter();
     moveDinosaur();
     startView();
     createBarriers();
@@ -27,6 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
       clrearDinosaurInterval();
       // * stop the barrier interval (dont create new barrier)
       clearBarrierInterval();
+      // * stop the counter
+      stopCounter();
+      showGameOver();
       isGameOn = false;
     });
   };
