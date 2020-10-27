@@ -36,3 +36,30 @@
   }
 }
 
+
+@keyframes move-cloud-1 {
+  0% {
+      transform: translateX(900px);
+  }
+  100% {
+      transform: translateX(-100px);
+  }
+}
+
+@keyframes move-cloud-2 {
+  0% {
+      transform: translateX(700px);
+  }
+  100% {
+      transform: translateX(-150px);
+  }
+}
+
+@keyframes move-cloud-3 {
+  0% {
+      transform: translateX(800px);
+  }
+  100% {
+      transform: translateX(-150px);
+  }
+}

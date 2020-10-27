@@ -1,6 +1,7 @@
 @import './barriers.css';
 @import './dinosaur.css';
 @import './view.css';
+@import './animations.css';
 
 body {
   width: 100%;
