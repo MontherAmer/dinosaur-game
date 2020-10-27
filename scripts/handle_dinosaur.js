@@ -51,3 +51,10 @@ export const stopBending = () => {
     interval++;
   }, 100);
 };
+
+export const clrearDinosaurInterval = () => {
+  clearInterval(dinosaurInterval);
+  const dinosaur = document.querySelector('.dinosaur');
+  dinosaur.classList.remove('dinosaur_run1', 'dinosaur_run2', 'dinosaur_bend1', 'dinosaur_bend2');
+  dinosaur.classList.add('dinosaur-die');
+};

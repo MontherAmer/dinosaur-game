@@ -3,9 +3,10 @@ window.$ = require('jquery');
 
 const { prepareContainer } = require('./pre_start');
 
-const { moveDinosaur, jumb, bend,stopBending } = require('./handle_dinosaur');
-const { createBarriers } = require('./handle_barriers');
+const { moveDinosaur, jumb, bend, stopBending, clrearDinosaurInterval } = require('./handle_dinosaur');
+const { createBarriers, clearBarrierInterval } = require('./handle_barriers');
 const { startView } = require('./handle_view');
+const { handleGameOver, stopAnimations } = require('./handle_game_over');
 
 // * document loaded
 document.addEventListener('DOMContentLoaded', () => {
@@ -14,10 +15,20 @@ document.addEventListener('DOMContentLoaded', () => {
   prepareContainer();
 
   const startGame = () => {
-    isGameOn = !isGameOn;
+    isGameOn = true;
     moveDinosaur();
     startView();
     createBarriers();
+    handleGameOver((data) => {
+      console.log(data);
+      // * stop all animations
+      stopAnimations();
+      // * stop dinosaur moving and add dinosaur die image
+      clrearDinosaurInterval();
+      // * stop the barrier interval (dont create new barrier)
+      clearBarrierInterval();
+      isGameOn = false;
+    });
   };
 
   document.addEventListener('keydown', (e) => {

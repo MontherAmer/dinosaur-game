@@ -28,7 +28,11 @@
   width: 67px;
 }
 
+.dinosaur-die {
+  background-image: url('../assets/images/dinosaur-die.png');
+}
+
 /** add animation for the dinosaur when jumbing  */
 .dinosaur-jumb {
-  animation: dinosaur-jumb 1.1s cubic-bezier(0,.94,0,1.03) both;
+  animation: dinosaur-jumb 1.1s cubic-bezier(0, 0.94, 0, 1.03) both;
 }

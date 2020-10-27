@@ -15,3 +15,7 @@ export const createBarriers = () => {
     moveBarrier();
   }, 3700);
 };
+
+export const clearBarrierInterval = () => {
+  clearInterval(barrierInterval);
+};
