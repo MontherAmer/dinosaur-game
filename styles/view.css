@@ -1,3 +1,5 @@
+@import './animations.css';
+
 .ground {
   position: absolute;
   bottom: 5px;
@@ -7,4 +9,41 @@
   background-size: cover;
   height: 10px;
   width: 960px;
+  animation: ground-slide1 3.3s linear infinite;
+}
+
+.ground2 {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  background-image: url('../assets/images/ground.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 10px;
+  width: 960px;
+  animation: ground-slide2 3.3s linear infinite;
+}
+
+.cloud {
+  background-image: url('../assets/images/cloud.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 97px;
+  height: 28px;
+}
+
+.move-cloud-1 {
+  bottom: 70px;
+  animation: move-cloud-1 100s cubic-bezier(0.25, 0.94, 0.46, 0.45) infinite;
+}
+
+.move-cloud-2 {
+  bottom: 80px;
+  animation: move-cloud-2 100s cubic-bezier(0.25, 0.94, 0.46, 0.45) infinite;
+}
+
+.move-cloud-3 {
+  bottom: 85px;
+  animation: move-cloud-3 100s cubic-bezier(0.25, 0.94, 0.46, 0.45) infinite;
 }
