@@ -1,17 +1,18 @@
 require('../styles/index.css');
 window.$ = require('jquery');
 
-const { prepareContainer } = require('./pre_start');
 
-const { moveDinosaur, jumb, bend, stopBending, clrearDinosaurInterval } = require('./handle_dinosaur');
-const { createBarriers, clearBarrierInterval } = require('./handle_barriers');
 const { startView } = require('./handle_view');
-const { handleGameOver, stopAnimations, showGameOver } = require('./handle_game_over');
+const { prepareContainer } = require('./pre_start');
 const { startCounter, stopCounter } = require('./handle_counter');
+const { createBarriers, clearBarrierInterval } = require('./handle_barriers');
+const { handleGameOver, stopAnimations, showGameOver } = require('./handle_game_over');
+const { moveDinosaur, jumb, bend, stopBending, clrearDinosaurInterval } = require('./handle_dinosaur');
 
 // * document loaded
 document.addEventListener('DOMContentLoaded', () => {
   let isGameOn = false;
+  let firstGame = true;
   // * get container and add element to it
   prepareContainer();
 
@@ -32,12 +33,21 @@ document.addEventListener('DOMContentLoaded', () => {
       // * stop the counter
       stopCounter();
       showGameOver();
+      firstGame = false;
       isGameOn = false;
     });
   };
 
   document.addEventListener('keydown', (e) => {
-    !isGameOn ? startGame() : e.key === 'ArrowUp' ? jumb() : e.key === 'ArrowDown' ? bend() : console.log('whiat');
+    !isGameOn
+      ? firstGame
+        ? startGame()
+        : location.reload()
+      : e.key === 'ArrowUp'
+      ? jumb()
+      : e.key === 'ArrowDown'
+      ? bend()
+      : console.log('whiat');
   });
 
   // * track the arrow down to check when user stop pressing the key
