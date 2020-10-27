@@ -1,0 +1,30 @@
+{
+  "name": "dinosaur-game",
+  "version": "1.0.0",
+  "description": "internet disconnect dinosaur game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MontherAmer/dinosaur-game.git"
+  },
+  "author": "montheramer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MontherAmer/dinosaur-game/issues"
+  },
+  "homepage": "https://github.com/MontherAmer/dinosaur-game#readme",
+  "devDependencies": {
+    "webpack": "^5.3.0",
+    "webpack-cli": "^4.1.0"
+  },
+  "dependencies": {
+    "css-loader": "^5.0.0",
+    "jquery": "^3.5.1",
+    "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1"
+  }
+}
