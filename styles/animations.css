@@ -15,7 +15,7 @@
   }
 }
 
-@-webkit-keyframes barrier-slide {
+@keyframes barrier-slide {
   0% {
     transform: translateX(700px);
   }
@@ -23,3 +23,16 @@
     transform: translateX(-100px);
   }
 }
+
+@keyframes dinosaur-jumb {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-85px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
