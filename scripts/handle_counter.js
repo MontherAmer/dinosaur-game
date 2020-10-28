@@ -2,10 +2,21 @@ let counterInterval;
 let counter = 0;
 let counterDiv = document.querySelector('.counter');
 let topScoreDiv = document.querySelector('.top_score');
+let currentSpeed = 3.3;
 
 const playPointsSound = () => {
   const pointAudio = document.getElementById('pointAudio');
   pointAudio.play();
+};
+
+const increaseSpeed = () => {
+  const barrier = document.querySelector('.barrier');
+  const ground = document.querySelector('.ground');
+  const ground2 = document.querySelector('.ground2');
+  currentSpeed = currentSpeed - .1;
+  barrier.style.animationDuration = `${currentSpeed}s`;
+  ground.style.animationDuration = `${currentSpeed}s`;
+  ground2.style.animationDuration = `${currentSpeed}s`;
 };
 
 const displayOnScreen = (type, data) => {
@@ -25,7 +36,7 @@ export const startCounter = () => {
     counter > topScore ? (topScore = counter) : null;
     displayOnScreen('C', counter);
     displayOnScreen('T', topScore);
-    counter % 100 === 0 ? playPointsSound() : null;
+    counter % 100 === 0 ? (playPointsSound(), increaseSpeed()) : null;
   }, 70);
 };
 
