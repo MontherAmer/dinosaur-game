@@ -1,7 +1,6 @@
 let barrierInterval;
 const container = document.querySelector('.container');
 const barrier = document.createElement('div');
-let acceleration = 0;
 
 const moveBarrier = () => {
   container.appendChild(barrier);
@@ -15,9 +14,7 @@ export const createBarriers = (_time) => {
   moveBarrier();
   barrierInterval = barrierInterval = setInterval(() => {
     count++;
-    count % 5 === 0
-      ? (clearInterval(barrierInterval), createBarriers(_time - (Math.floor(Math.random() * (100 - 90 + 1)) + 90)))
-      : moveBarrier();
+    count % 5 === 0 ? (clearInterval(barrierInterval), createBarriers(_time - 100)) : moveBarrier();
     console.log('_time  ', _time);
   }, _time);
 };

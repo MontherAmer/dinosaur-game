@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     startCounter();
     moveDinosaur();
     startView();
-    createBarriers(3700);
+    createBarriers(2700);
     handleGameOver((data) => {
       console.log(data);
       // * stop all animations

@@ -2,7 +2,7 @@ let counterInterval;
 let counter = 0;
 let counterDiv = document.querySelector('.counter');
 let topScoreDiv = document.querySelector('.top_score');
-let currentSpeed = 3.3;
+let currentSpeed = 2.7;
 
 const playPointsSound = () => {
   const pointAudio = document.getElementById('pointAudio');
