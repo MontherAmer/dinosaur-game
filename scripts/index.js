@@ -1,15 +1,15 @@
-require('../styles/index.css');
-window.$ = require('jquery');
+require("../styles/index.css");
+window.$ = require("jquery");
 
-const { startView } = require('./handle_view');
-const { prepareContainer } = require('./pre_start');
-const { startCounter, stopCounter } = require('./handle_counter');
-const { createBarriers, clearBarrierInterval } = require('./handle_barriers');
-const { handleGameOver, stopAnimations, showGameOver, playDieSound } = require('./handle_game_over');
-const { moveDinosaur, jumb, bend, stopBending, clrearDinosaurInterval } = require('./handle_dinosaur');
+const { startView } = require("./handle_view");
+const { prepareContainer } = require("./pre_start");
+const { startCounter, stopCounter } = require("./handle_counter");
+const { createBarriers, clearBarrierInterval } = require("./handle_barriers");
+const { handleGameOver, stopAnimations, showGameOver, playDieSound } = require("./handle_game_over");
+const { moveDinosaur, jumb, bend, stopBending, clrearDinosaurInterval } = require("./handle_dinosaur");
 
 // * document loaded
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   let isGameOn = false;
   let firstGame = true;
   let sounedPlayed = false;
@@ -41,20 +41,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  document.addEventListener('keydown', (e) => {
+  document.addEventListener("keydown", (e) => {
     !isGameOn
       ? firstGame
         ? startGame()
         : location.reload()
-      : e.key === 'ArrowUp'
+      : e.key === "ArrowUp"
       ? jumb()
-      : e.key === 'ArrowDown'
+      : e.key === "ArrowDown"
       ? bend()
-      : console.log('whiat');
+      : console.log("whiat");
   });
 
   // * track the arrow down to check when user stop pressing the key
-  document.addEventListener('keyup', (e) => {
-    e.key === 'ArrowDown' ? stopBending() : null;
+  document.addEventListener("keyup", (e) => {
+    e.key === "ArrowDown" ? stopBending() : null;
   });
+
+  document.getElementById("UpButton").addEventListener("click", function () {
+    !isGameOn ? (firstGame ? startGame() : location.reload()) : jumb();
+  });
+
+  document.getElementById("DownButton").addEventListener("mousedown", function () {
+    !isGameOn ? (firstGame ? startGame() : location.reload()) : bend();
+  });
+
+  document.getElementById("DownButton").addEventListener("mouseup", function () {
+    !isGameOn ? (firstGame ? startGame() : location.reload()) : stopBending();
+  });
+
 });

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>My Game</title>
   </head>
   <body>
     <div class="title">
-      <h1>Google Dinosaur Game</h1>
+      <h1>Running Dinosaur Game</h1>
       <p>press &#8593; to jumb, &#8595; to bend.</p>
     </div>
     <div class="container">
@@ -15,6 +16,10 @@
         <div class="counter">00000</div>
       </div>
       <img src="./assets/images/gameOver.png" class="game_over" />
+    </div>
+    <div class="flex-buttons">
+      <Button id='UpButton'>&#8593;</Button>
+      <Button id='DownButton'> &#8595;</Button>
     </div>
     <audio id="dieAudio" style="visibility: hidden">
       <source src="./assets/sounds/die.wav" type="audio/ogg" />
