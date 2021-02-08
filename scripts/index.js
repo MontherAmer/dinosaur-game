@@ -53,21 +53,12 @@ document.addEventListener("DOMContentLoaded", () => {
       : console.log("whiat");
   });
 
+  document.addEventListener("touchstart", (e) => {
+    !isGameOn ? (firstGame ? startGame() : location.reload()) : jumb();
+  });
+
   // * track the arrow down to check when user stop pressing the key
   document.addEventListener("keyup", (e) => {
     e.key === "ArrowDown" ? stopBending() : null;
   });
-
-  document.getElementById("UpButton").addEventListener("click", function () {
-    !isGameOn ? (firstGame ? startGame() : location.reload()) : jumb();
-  });
-
-  document.getElementById("DownButton").addEventListener("mousedown", function () {
-    !isGameOn ? (firstGame ? startGame() : location.reload()) : bend();
-  });
-
-  document.getElementById("DownButton").addEventListener("mouseup", function () {
-    !isGameOn ? (firstGame ? startGame() : location.reload()) : stopBending();
-  });
-
 });
