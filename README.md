@@ -3,4 +3,4 @@ Google chrome offline dinosaur game built using html and javascript
 
 ### [Play the game](https://montheramer.github.io/dinosaur-game/)
 
-![](preview.png)
+![](preview.gif)
